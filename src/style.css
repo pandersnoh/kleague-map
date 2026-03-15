@@ -1,0 +1,44 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-pitch: #0a4d1e;
+  --color-pitch-light: #12722d;
+  --color-surface: #0f1923;
+  --color-surface-2: #1a2535;
+  --color-surface-3: #243044;
+  --color-text: #e8edf3;
+  --color-text-muted: #7a8fa6;
+  --color-accent: #4ade80;
+  --color-accent-2: #facc15;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Pretendard Variable', 'Noto Sans KR', sans-serif;
+  background: var(--color-surface);
+  color: var(--color-text);
+  overflow: hidden;
+}
+
+#app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--color-surface-2); }
+::-webkit-scrollbar-thumb { background: var(--color-surface-3); border-radius: 3px; }
+
+/* Leaflet 기본 오버라이드 — MapView.vue <style> 블록에서 추가 처리 */
