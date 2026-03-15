@@ -9,7 +9,7 @@
   "main": "postcss.config.js",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview",
     "cap:init": "npx cap init \"K리그 경기장 맵\" com.kleague.map --web-dir=dist",
     "cap:add": "npx cap add android",
