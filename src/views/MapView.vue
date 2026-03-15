@@ -258,8 +258,6 @@ function createIcon(team: Stadium): L.DivIcon {
     : ''
   const badgeClass = [isMy ? 'myteam' : '', isFav ? 'favorite' : ''].filter(Boolean).join(' ')
 
-  const pulse = isMy ? 'style="animation:markerPulse 2s infinite"' : ''
-
   const html = `
     <div class="team-icon-wrap ${badgeClass}" 
           style="display:flex;flex-direction:column;align-items:center;
