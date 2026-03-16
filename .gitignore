@@ -6,6 +6,7 @@
 
 node_modules/
 dist/
+android/
 npm-debug.log
 yarn-error.log
 
