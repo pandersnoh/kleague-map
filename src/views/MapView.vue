@@ -95,8 +95,14 @@
               @click="selectAndFly(team)"
             >
               <div class="team-card-left">
-                <div class="team-emoji" :style="{ background: team.primaryColor + '22', border: '2px solid ' + team.primaryColor + '55' }">{{ team.emoji }}</div>
-                <div class="team-info">
+                  <div class="team-emoji">
+                    <div v-if="team.emblemUrl">
+                      <img :src="`${team.emblemUrl}`" :alt="`${team.teamName}`" />
+                    </div>
+                    <div v-else>
+                      <span>{{ team.emoji }}</span>
+                    </div>
+                  </div>                <div class="team-info">
                   <div class="team-name">{{ team.teamName }}<span v-if="store.isMyTeam(team.id)" class="my-badge">MY</span></div>
                   <div class="team-stadium">{{ team.stadiumName }}</div>
                   <div class="team-city">📍 {{ team.city }}</div>
