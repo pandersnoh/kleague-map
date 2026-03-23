@@ -102,7 +102,7 @@ function onMobileSelect(team: Stadium) {
   bottom: 0; left: 0; right: 0;
   width: 100%;
   min-width: unset;
-  height: 45dvh;
+  height: 40dvh;
   background: #1a2535 !important;
   border-radius: 20px 20px 0 0;
   border-top: 1px solid rgba(255,255,255,0.1);

@@ -1,5 +1,5 @@
 <template>
-  <div class="stats-bar">
+  <div class="stats-bar" :class="{ 'isMobile': isMobile }">
     <div class="stat">
       <span class="stat-num">{{ store.filteredTeams.length }}</span>
       <span class="stat-label">노출 팀</span>
@@ -18,8 +18,11 @@
 </template>
 
 <script setup lang="ts">
+import { ref } from 'vue'
 import { useKleagueStore } from '@/stores/kleague'
 const store = useKleagueStore()
+
+const isMobile = ref(window.innerWidth <= 768)
 </script>
 
 <style scoped>
@@ -31,6 +34,9 @@ const store = useKleagueStore()
   padding: 10px 16px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
   flex-shrink: 0;
+}
+.stats-bar.isMobile {
+  display:none;
 }
 .stat { display: flex; flex-direction: column; align-items: center; gap: 1px; }
 .stat-num { font-weight: 700; font-size: 16px; color: var(--color-accent); }
